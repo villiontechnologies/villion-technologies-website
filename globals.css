@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #d8a52b;
+  --gold-bright: #f5d36a;
+  --red: #9f1017;
+  --red-bright: #e01b24;
+  --ink: #050505;
+  --panel: #0d0d0f;
+  --muted: #b8b8bd;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+::selection { background: var(--red-bright); color: white; }
+
+.gold-text {
+  background: linear-gradient(90deg, #b77910, #ffe18a 48%, #b77910);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.red-glow { box-shadow: 0 0 50px rgba(224,27,36,.16); }
+.gold-glow { box-shadow: 0 0 40px rgba(216,165,43,.14); }
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+.hero-glow {
+  background:
+    radial-gradient(circle at 75% 30%, rgba(224,27,36,.34), transparent 30%),
+    radial-gradient(circle at 70% 65%, rgba(216,165,43,.10), transparent 26%);
+}
+.service-card {
+  background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+  border: 1px solid rgba(216,165,43,.24);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(224,27,36,.75);
+  box-shadow: 0 18px 50px rgba(224,27,36,.12);
+}
